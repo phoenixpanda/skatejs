@@ -38,6 +38,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - #184 - The `skate.defaults` property is no longer public and has been removed. No alternative will be provided.
 - #187 - Modifying `element.attributes` directly no longer triggers the `attribute` callback.
+- #289 - the `skate` global is no longer set when importing `src/index.js`, and the `skate.noConflict()` method is not present when consuming skate in this way.
 
 ### Upgrading
 
@@ -203,7 +204,7 @@ If you put your component definitions at the top of the page, they will be upgra
 </x-parent>
 ```
 
-In the HTML example above, `x-parent` would be upgraded, then `x-child` and finally `x-descendant`. If `x-parent` or `x-child` need something from one of their descendants their out of luck.
+In the HTML example above, `x-parent` would be upgraded, then `x-child` and finally `x-descendant`. If `x-parent` or `x-child` need something from one of their descendants they're out of luck.
 
 ##### Definitions at the end of `<body>`
 
