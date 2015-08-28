@@ -11,7 +11,6 @@ export default skate('sk-navbar', {
   },
   properties: {
     scrolled: {
-      emit: true,
       type: Boolean
     }
   },
