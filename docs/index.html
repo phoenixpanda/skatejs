@@ -1,20 +1,24 @@
 <!doctype html>
 <html>
   <head>
-    <title>SkateJS{{#if title}} - {{title}}{{/if}}</title>
-    <link rel="stylesheet" href="{{root}}/styles/index.css">
-    <script src="{{root}}/scripts/index.js"></script>
+    <title>SkateJS</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
   </head>
   <body>
+    <sk-router view="view">
+      <sk-route path="/" page="index"></sk-route>
+      <sk-route path="/docs" page="docs-index"></sk-route>
+    </sk-router>
     <sk-app>
-      <sk-navbar fixed{{#if reveal}} class="transition-logo-on-scroll"{{/if}}>
-        <a class="navbar-brand" href="{{root}}/">
+      <sk-navbar class="transition-logo-on-scroll">
+        <a class="navbar-brand" href="/">
           <skate>skate</skate>
         </a>
         <sk-navbar-nav>
-          <a href="{{root}}/docs/">Docs</a>
-          <a href="{{root}}/contributing.html">Contributing</a>
-          <a href="{{root}}/license.html">License</a>
+          <a href="/docs/">Docs</a>
+          <a href="/contributing.html">Contributing</a>
+          <a href="/license.html">License</a>
         </sk-navbar-nav>
         <sk-navbar-form></sk-navbar-form>
       </sk-navbar>

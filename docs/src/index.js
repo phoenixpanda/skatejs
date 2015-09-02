@@ -1,7 +1,10 @@
 import '../index.html';
+
+import 'bootstrap/less/bootstrap.less';
 import './index.less';
 import './main.less';
 import './skate.less';
+
 import './components/app';
 import './components/code';
 import './components/docs-layout';
@@ -14,7 +17,28 @@ import './components/navbar';
 import './components/navbar/form';
 import './components/navbar/nav';
 import './components/notice';
+import './components/router';
+import './components/router/route';
 import './components/sidebar';
 import './components/spin';
 import './components/stars';
 import './components/version';
+
+import './pages/contributing';
+import './pages/docs/index';
+import './pages/docs/installing';
+import './pages/docs/quirks';
+import './pages/docs/skate';
+import './pages/docs/skate/create';
+import './pages/docs/options/attached';
+import './pages/docs/options/attribute';
+import './pages/docs/options/created';
+import './pages/docs/options/detached';
+import './pages/docs/options/events';
+import './pages/docs/options/extends';
+import './pages/docs/options/properties';
+import './pages/docs/options/prototype';
+import './pages/docs/options/template';
+import './pages/docs/options/type';
+import './pages/index';
+import './pages/license';

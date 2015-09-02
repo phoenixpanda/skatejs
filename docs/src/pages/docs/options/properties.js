@@ -1,6 +1,6 @@
-import skate from '../../../src/index';
+import skate from '../../../../../src/index';
 
-export default skate('sk-page-docs-skate', {
+export default skate('sk-page-docs-options-properties', {
   template () {
     this.innerHTML = `
       <sk-docs-layout>

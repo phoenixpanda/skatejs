@@ -1,4 +1,4 @@
-import skate from '../../../src/index';
+import skate from '../../../../src/index';
 
 export default skate('sk-page-docs-skate', {
   template () {

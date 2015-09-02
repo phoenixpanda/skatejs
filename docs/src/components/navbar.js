@@ -1,5 +1,5 @@
-import shade from 'shadejs';
 import skate from '../../../../src/index';
+import template from '../util/template';
 
 export default skate('sk-navbar', {
   attached () {
@@ -10,28 +10,27 @@ export default skate('sk-navbar', {
     document.removeEventListener('scroll', this._toggleClassOnScroll);
   },
   properties: {
+    innerHTML: {},
     scrolled: {
-      type: Boolean
+      type: Boolean,
+      set: function (oldValue, newValue) {
+        skate.emit(this, 'skate.property', {
+          bubbles: false,
+          cancellable: false,
+          detail: {
+            name: 'scrolled',
+            newValue: newValue,
+            oldValue: oldValue
+          }
+        })
+      }
     }
   },
-  template: shade(`
-    <nav class="navbar navbar-default navbar-fixed-top" sh-class="scrolled:scrolled">
+  template: template(function () { return `
+    <nav class="navbar navbar-default navbar-fixed-top ${this.scrolled ? 'scrolled' : ''}">
       <div class="container-fluid">
-        <content name="brand" select="[brand]"></content>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <content name="innerHTML">
-            <sk-navbar-nav>
-              <a href="#">Home</a>
-            </sk-navbar-nav>
-          </content>
-        </div>
+        ${this.innerHTML}
       </div>
     </nav>
-  `)
+  `;})
 });

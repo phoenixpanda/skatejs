@@ -11,7 +11,7 @@
     "bootstrap": "^3.3.0",
     "eslint": "^1.3.0",
     "font-awesome": "^4.3.0",
-    "galvatron": "treshugart/galvatron#5b7c948",
+    "galvatron": "treshugart/galvatron#7a3d1a4",
     "gulp": "^3.9.0",
     "gulp-auto-task": "treshugart/gulp-auto-task#d1e5118",
     "gulp-babel": "^5.2.1",
@@ -34,10 +34,12 @@
     "karma-sinon-chai": "^1.0.0",
     "lodash": "^3.10.1",
     "mocha": "^2.3.0",
+    "page": "^1.6.3",
     "shadejs": "skatejs/shade#2a69707",
     "skatejs-polyfill-mutation-observer": "skatejs/polyfill-mutation-observer#a7dbecf",
     "skatejs-type-attribute": "skatejs/type-attribute#28140f7",
     "skatejs-type-class": "skatejs/type-class#8302a2f",
+    "skatejs-dom-diff": "skatejs/dom-diff#c066010",
     "whatwg-fetch": "^0.9.0"
   },
   "scripts": {
