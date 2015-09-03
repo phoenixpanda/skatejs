@@ -1,8 +1,9 @@
 import skate from '../../../src/index';
+import template from '../util/template';
 
 export default skate('sk-page-index', {
-  template () {
-    this.innerHTML = `
+  template: template(function () {
+    return `
       <div class="jumbotron">
         <div class="container">
           <div class="row">
@@ -93,8 +94,8 @@ export default skate('sk-page-index', {
         </div>
       </div>
       <div class="well well-general">
-        <!--iframe src="http://jsbin.com/zaruxomoye/4/embed?js,output"></iframe-->
+        <iframe src="http://jsbin.com/zaruxomoye/4/embed?js,output"></iframe>
       </div>
     `;
-  }
+  })
 });
